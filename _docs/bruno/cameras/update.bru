@@ -1,0 +1,23 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:8000/cameras
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "id": 2,
+    "brand": "Nikon",
+    "model": "FE2"
+  }
+}

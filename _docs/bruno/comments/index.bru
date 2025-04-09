@@ -1,0 +1,19 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/comments?frame_id=5
+  body: none
+  auth: none
+}
+
+params:query {
+  frame_id: 5
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

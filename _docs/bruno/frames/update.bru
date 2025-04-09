@@ -1,0 +1,28 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:8000/frames
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "id": 1,
+    "camera_id": 4,
+    "lens_id": 6,
+    "film_stock_id": 3,
+    "lab_id": 4,
+    "image": "xyz.png",
+    "caption": "Sunny day in the swiss alps",
+    "location": "Gornergrat, Zermatt"
+  }
+}

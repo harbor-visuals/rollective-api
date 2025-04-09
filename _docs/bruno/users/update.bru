@@ -1,0 +1,28 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:8000/user
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "id": 1,
+    "name": "Lorem Ipsum",
+    "username": "loremipsum",
+    "email": "demo@mail.com",
+    "password": "loremipsum1234",
+    "picture": "xyz.jpg",
+    "biography": "Street Photographer",
+    "location": "San Diego, California"
+  }
+}

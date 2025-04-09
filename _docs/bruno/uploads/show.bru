@@ -1,0 +1,21 @@
+meta {
+  name: show
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8000/uploads
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "filename": "fall.webp"
+  }
+}
