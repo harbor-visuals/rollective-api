@@ -23,7 +23,6 @@
 
 - rolls / frame_roll
 - comments
-- film_stocks
 
 ## 💻 Functionality:
 
@@ -31,9 +30,6 @@
     1. Adding of a frame to a roll collection
 2. Frame Comments
     1. Leaving a comment on a posted frame
-3. Film Stocks
-    1. Every user can have a collection of film stocks (CRUD)
-    2. Can be linked with frames
 
 # ☁️ Could-Have
 
@@ -43,6 +39,7 @@
 - cameras
 - lenses
 - development_labs
+- film_stocks
 
 ## 💻 Functionality:
 
@@ -50,13 +47,16 @@
     1. Every use can follow other users
     2. Feed with posts from users that the user follows
     3. User Profile to check out all posts
-2. Cameras
+2. Film Stocks
+    1. Every user can have a collection of film stocks (CRUD)
+    2. Can be linked with frames
+3. Cameras
     1. Every user can have a collection of cameras (CRUD)
     2. Can be linked with frames
-3. Lenses
+4. Lenses
     1. Every user can have a collection of lenses (CRUD)
     2. Can be linked with frames
-4. Development Labs
+5. Development Labs
     1. Every user can have a collection of development labs (CRUD)
     2. Can be linked with frames
 

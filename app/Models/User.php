@@ -22,17 +22,15 @@ class User extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  function cameras() {
-    return $this->hasMany(Camera::class);
-  }
-
-  function comments() {
-    return $this->hasMany(Comment::class);
-  }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([
+        // Fields that are required
         'email' => [($post ? 'required' : 'sometimes'), 'email', 'unique:users,email'],
         'username' => [($post ? 'required' : 'sometimes'), 'unique:users,username', 'min:6', 'max:12'],
         'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
