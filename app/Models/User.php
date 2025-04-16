@@ -22,10 +22,16 @@ class User extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
+
+  public function frames()
+  {
+      return $this->hasMany(Frame::class);
+  }
+
+  // public function comments()
+  // {
+  //     return $this->hasMany(Comment::class);
+  // }
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
@@ -37,9 +43,9 @@ class User extends Model {
     
         // Fields that are optional
         'name' => ['sometimes', 'min:2', 'max:20'],
-        'picture' => ['sometimes', 'size:60'],
+        'picture' => ['sometimes', 'size:64'],
         'biography' => ['sometimes', 'min:10', 'max:150'],
-        'location' => ['sometimes', 'min:2', 'max:20'],
+        'location' => ['sometimes', 'min:2', 'max:30'],
       ]);
   }
 

@@ -22,21 +22,19 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::patch('/user', [UserController::class, 'update']);
   Route::delete('/user', [UserController::class, 'destroy']);
 
-  Route::get('/frames', [FramesController::class, 'index']);
-  Route::post('/frames', [FramesController::class, 'create']);
-  Route::patch('/frames', [FramesController::class, 'update']);
-  Route::delete('/frames', [FramesController::class, 'destroy']);
+  // Route::get('/frames', [FramesController::class, 'index']);
+  // Route::post('/frames', [FramesController::class, 'create']);
+  // Route::patch('/frames', [FramesController::class, 'update']);
+  // Route::delete('/frames', [FramesController::class, 'destroy']);
 
-  Route::get('/comments', [CommentsController::class, 'index']);
-  Route::post('/comments', [CommentsController::class, 'create']);
-  Route::patch('/comments', [CommentsController::class, 'update']);
-  Route::delete('/comments', [CommentsController::class, 'destroy']);
+  // Route::get('/comments', [CommentsController::class, 'index']);
+  // Route::post('/comments', [CommentsController::class, 'create']);
+  // Route::patch('/comments', [CommentsController::class, 'update']);
+  // Route::delete('/comments', [CommentsController::class, 'destroy']);
 
-  Route::get('/rolls', [RollsController::class, 'index']);
-  Route::post('/rolls', [RollsController::class, 'create']);
-  Route::patch('/rolls', [RollsController::class, 'update']);
-  Route::delete('/rolls', [RollsController::class, 'destroy']);
+  // Route::get('/rolls', [RollsController::class, 'index']);
+  // Route::put('/rolls/assign', [RollsController::class, 'assign']);
 
-  Route::post('/uploads', [UploadsController::class, 'create']);
-  Route::delete('/uploads', [UploadsController::class, 'destroy']);
+  // Route::post('/uploads', [UploadsController::class, 'create']);
+  // Route::delete('/uploads', [UploadsController::class, 'destroy']);
 });
