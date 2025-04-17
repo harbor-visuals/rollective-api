@@ -22,13 +22,14 @@ class Frame extends Model {
   //   return $this->belongsToMany(Roll::class);
   // }
 
-  protected $with = ['tags'];
+  // protected $with = ['tags'];
 
   static function validate(Request $request) {
+    $post = $request->method() === 'POST';
     return $request->validate([
       // Fields that are required
-      'caption' => ['required','min:1','max:300'],
-      'image' => ['required', 'size:64'],
+      'caption' => [($post ? 'required' : 'sometimes'),'min:1','max:300'],
+      'image' => [($post ? 'required' : 'sometimes'), 'size:68'],
 
       // Fields that are optional
       'camera' => ['sometimes', 'nullable', 'string', 'max:100'],

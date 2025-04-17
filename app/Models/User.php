@@ -42,10 +42,10 @@ class User extends Model {
         'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
     
         // Fields that are optional
-        'name' => ['sometimes', 'nullable', 'min:2', 'max:20'],
-        'picture' => ['sometimes', 'nullable', 'size:64'],
-        'biography' => ['sometimes', 'nullable', 'min:10', 'max:150'],
-        'location' => ['sometimes', 'nullable', 'min:2', 'max:30'],
+        'name' => ['sometimes', 'nullable', 'min:1', 'max:20'],
+        'picture' => ['sometimes', 'nullable', 'size:68'],
+        'biography' => ['sometimes', 'nullable', 'min:1', 'max:150'],
+        'location' => ['sometimes', 'nullable', 'min:1', 'max:30'],
       ]);
   }
 

@@ -5,9 +5,19 @@ meta {
 }
 
 get {
-  url: http://localhost:8000/frames
+  url: http://localhost:8000/frames?order_dir=desc
   body: none
   auth: none
+}
+
+params:query {
+  order_dir: desc
+  ~order_by: created_at
+  ~id: 8
+  ~roll_ids: 1,2,3
+  ~limit: 2
+  ~offset: 2
+  ~user_id: 3
 }
 
 headers {

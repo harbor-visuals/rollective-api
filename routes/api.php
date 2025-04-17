@@ -1,13 +1,9 @@
 <?php
 
 use App\Controllers\AuthController;
-use App\Controllers\CommentsController;
-use App\Controllers\TagsController;
 use Illuminate\Support\Facades\Route;
-use App\Controllers\ExamplesController;
-use App\Controllers\ArticlesController;
 use App\Controllers\UserController;
-use App\Controllers\UploadsController;
+use App\Controllers\FramesController;
 use App\Controllers\MailsController;
 
 // guest endpoints
@@ -22,10 +18,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::patch('/user', [UserController::class, 'update']);
   Route::delete('/user', [UserController::class, 'destroy']);
 
-  // Route::get('/frames', [FramesController::class, 'index']);
-  // Route::post('/frames', [FramesController::class, 'create']);
-  // Route::patch('/frames', [FramesController::class, 'update']);
-  // Route::delete('/frames', [FramesController::class, 'destroy']);
+  Route::get('/frames', [FramesController::class, 'index']);
+  Route::post('/frames', [FramesController::class, 'create']);
+  Route::patch('/frames', [FramesController::class, 'update']);
+  Route::delete('/frames', [FramesController::class, 'destroy']);
 
   // Route::get('/comments', [CommentsController::class, 'index']);
   // Route::post('/comments', [CommentsController::class, 'create']);
