@@ -6,6 +6,7 @@ use App\Controllers\UserController;
 use App\Controllers\FramesController;
 use App\Controllers\CommentsController;
 use App\Controllers\RollsController;
+use App\Controllers\UploadsController;
 
 // guest endpoints
 Route::post('/auth/login', [AuthController::class, 'login']);
@@ -32,6 +33,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/rolls', [RollsController::class, 'index']);
   Route::put('/rolls/assign', [RollsController::class, 'assign']);
 
-  // Route::post('/uploads', [UploadsController::class, 'create']);
-  // Route::delete('/uploads', [UploadsController::class, 'destroy']);
+  Route::post('/uploads', [UploadsController::class, 'create']);
+  Route::delete('/uploads', [UploadsController::class, 'destroy']);
 });

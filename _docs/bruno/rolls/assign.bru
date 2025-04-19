@@ -1,11 +1,11 @@
 meta {
-  name: create
+  name: assign
   type: http
-  seq: 2
+  seq: 3
 }
 
-post {
-  url: http://localhost:8000/rolls
+put {
+  url: http://localhost:8000/rolls/assign
   body: json
   auth: none
 }
@@ -16,6 +16,7 @@ headers {
 
 body:json {
   {
-    "name": "Black & White"
+    "frame_id": 9,
+    "roll_ids": [3]
   }
 }
