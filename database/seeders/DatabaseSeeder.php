@@ -6,12 +6,14 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Frame;
+use App\Models\Comment;
 
 
 // faker: https://fakerphp.github.io/formatters/text-and-paragraphs/
 
 class DatabaseSeeder extends Seeder {
   function run() {
+    // user
     User::create([
       'email' => 'alpha@gmail.com',
       'username' => 'alpha',
@@ -74,6 +76,15 @@ class DatabaseSeeder extends Seeder {
         'lab' => fake()->word(),
         'created_at' => now()->addSeconds($i),
         'updated_at' => now()->addSeconds($i),
+      ]);
+    }
+
+    // comments
+    for ($i = 0; $i < 20; $i++) {
+      Comment::create([
+        'text' => fake()->sentence(),
+        'frame_id' => random_int(1, 20),
+        'user_id' => random_int(1, 5),
       ]);
     }
 

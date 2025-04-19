@@ -1,0 +1,46 @@
+---
+title: Rollective Application MVP
+---
+erDiagram
+    users {
+        int id
+        string name
+        string username
+        string email
+        string password
+        string picture
+        string biography
+        string location
+    }
+    
+    frames {
+        int id
+        int user_id
+        string image
+        string caption
+        string location
+    }
+    
+    comments {
+        int id
+        int user_id
+        int frame_id
+        string text
+    }
+    
+    rolls {
+        int id
+        string name
+    }
+    
+    frame_roll {
+        int id
+        int roll_id
+        int frame_id
+    }
+    
+    users ||--o{ frames : "has"
+    users ||--o{ comments : "writes"
+    frames ||--o{ comments : "has"
+    frames ||--o{ frame_roll : "belongs to"
+    rolls ||--o{ frame_roll : "contains"
