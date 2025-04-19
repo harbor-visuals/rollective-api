@@ -11,7 +11,7 @@ use App\Models\Frame;
 use App\Models\Comment;
 use App\Models\Roll;
 
-
+use Illuminate\Support\Facades\Log;
 // faker: https://fakerphp.github.io/formatters/text-and-paragraphs/
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
   function run()
   {
     // Empty the media folder
-    File::deleteDirectory(storage_path('public/media/images'), true);
+    File::deleteDirectory(public_path('media/images'), true);
 
     $users = [
       [
