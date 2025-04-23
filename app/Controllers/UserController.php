@@ -8,7 +8,23 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController {
   function index(Request $request) {
-    return Auth::user();
+    $query = User::query();
+
+    // filter by id (hide e-mail sensitive information)
+    $id = $request->input('id');
+    if($id) return $query->where('id', $id)->firstOrFail()->makeHidden('email');
+
+    // filter by username
+    $username = $request->input('username');
+    if($username) $query->where('username', 'like', '%' . $username . '%');
+
+    // if no filters are provided return the Authorized User
+    if(!$id && !$username){
+      return Auth::user();
+    }
+
+    // filtered users (hide e-mail sensitive information)
+    return $query->get()->makeHidden('email');
   }
 
   function create(Request $request) {
