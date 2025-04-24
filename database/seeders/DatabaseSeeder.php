@@ -106,43 +106,45 @@ class DatabaseSeeder extends Seeder
       ]);
     }
 
+    // rolls
     $rolls = [
-      'Portrait 🧑‍🦰',
-      'Street 🚶‍♂️',
-      'Landscape 🌄',
-      'Product 📦',
-      'Nature 🌿',
-      'Wildlife 🦌',
-      'Architecture 🏛️',
-      'Travel ✈️',
-      'Documentary 🎥',
-      'Sport 🏅',
-      'Food 🍽️',
-      'Night Photography 🌌',
-      'Low Light 🔦',
-      'Macro 🔍',
-      'Abstract 🎨',
-      'Minimalism ⚪',
-      'Underwater 🌊',
-      'Wedding 💍',
-      'Fashion 👗',
-      'Action 🏃‍♂️',
-      'Event / Concert 🎤',
-      'Black & White ⚫⚪',
-      'Aerial 🚁',
-      'Commercial 💼',
-      'Self-Portrait 🤳',
-      'Conceptual 💡',
-      'Expired ⏳',
-      'Moody 🌫️',
-      'Automotive 🚗',
-      'Long Exposure 🌀',
+      ['name' => 'Portrait', 'emoji' => '🧑‍🦰'],
+      ['name' => 'Street', 'emoji' => '🚶‍♂️'],
+      ['name' => 'Landscape', 'emoji' => '🌄'],
+      ['name' => 'Product', 'emoji' => '📦'],
+      ['name' => 'Nature', 'emoji' => '🌿'],
+      ['name' => 'Wildlife', 'emoji' => '🦌'],
+      ['name' => 'Architecture', 'emoji' => '🏛️'],
+      ['name' => 'Travel', 'emoji' => '✈️'],
+      ['name' => 'Documentary', 'emoji' => '🎥'],
+      ['name' => 'Sport', 'emoji' => '🏅'],
+      ['name' => 'Food', 'emoji' => '🍽️'],
+      ['name' => 'Night Photography', 'emoji' => '🌌'],
+      ['name' => 'Low Light', 'emoji' => '🔦'],
+      ['name' => 'Macro', 'emoji' => '🔍'],
+      ['name' => 'Abstract', 'emoji' => '🎨'],
+      ['name' => 'Minimalism', 'emoji' => '⚪'],
+      ['name' => 'Underwater', 'emoji' => '🌊'],
+      ['name' => 'Wedding', 'emoji' => '💍'],
+      ['name' => 'Fashion', 'emoji' => '👗'],
+      ['name' => 'Action', 'emoji' => '🏃‍♂️'],
+      ['name' => 'Event / Concert', 'emoji' => '🎤'],
+      ['name' => 'Black & White', 'emoji' => '⚫⚪'],
+      ['name' => 'Aerial', 'emoji' => '🚁'],
+      ['name' => 'Commercial', 'emoji' => '💼'],
+      ['name' => 'Self-Portrait', 'emoji' => '🤳'],
+      ['name' => 'Conceptual', 'emoji' => '💡'],
+      ['name' => 'Expired', 'emoji' => '⏳'],
+      ['name' => 'Moody', 'emoji' => '🌫️'],
+      ['name' => 'Automotive', 'emoji' => '🚗'],
+      ['name' => 'Long Exposure', 'emoji' => '🌀'],
     ];
-
+    
     foreach ($rolls as $roll) {
       Roll::create([
-        'name' => $roll,
+        'name' => $roll['name'],
+        'emoji' => $roll['emoji'],
       ]);
-    };
+    }
   }
 }

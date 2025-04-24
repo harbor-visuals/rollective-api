@@ -21,7 +21,7 @@ class RollsController {
     $frameId = $request->input('frame_id');
     $rollIds = $request->input('roll_ids');
     $frame = Auth::user()->frames()->findOrFail($frameId);
-    $frame->tags()->sync($rollIds);
+    $frame->rolls()->sync($rollIds);
     return $frame->fresh();
   }
 }

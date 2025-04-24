@@ -18,11 +18,11 @@ class Frame extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  function tags() {
+  function rolls() {
     return $this->belongsToMany(Roll::class);
   }
 
-  protected $with = ['tags'];
+  protected $with = ['rolls'];
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';

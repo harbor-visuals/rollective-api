@@ -9,6 +9,7 @@ return new class extends Migration {
     Schema::create('rolls', function (Blueprint $table) {
       $table->id();
       $table->string('name');
+      $table->string('emoji');
       $table->timestamp('created_at');
       $table->timestamp('updated_at');
     });

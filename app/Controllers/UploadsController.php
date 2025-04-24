@@ -23,7 +23,7 @@ class UploadsController {
     $codedFilename = $fileCode . '.' . $extension;
 
     Storage::putFileAs(
-        'media/' . $user->id,
+        'media/images/' . $user->id,
         $file,
         $codedFilename,
     );
@@ -34,7 +34,7 @@ class UploadsController {
   function destroy(Request $request) {
     $user = Auth::user();
     $codedFilename = $request->input('codedFilename');
-    $path = 'media/' . $user->id . '/' . $codedFilename;
+    $path = 'media/images/' . $user->id . '/' . $codedFilename;
     if (!Storage::exists($path))
       return abort(404, 'file does not exist');
     Storage::delete($path);

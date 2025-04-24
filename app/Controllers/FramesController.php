@@ -23,8 +23,8 @@ class FramesController {
     if ($rollIds) {
       $rollIds = explode(',', $rollIds);
       $query->whereHas(
-        'tags',
-        fn($q) => $q->whereIn('tags.id', $rollIds),
+        'rolls',
+        fn($q) => $q->whereIn('rolls.id', $rollIds),
         '>=',
         count($rollIds)
       );
