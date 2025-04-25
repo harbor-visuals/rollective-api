@@ -108,8 +108,8 @@ class DatabaseSeeder extends Seeder
 
     // rolls
     $rolls = [
-      ['name' => 'Portrait', 'emoji' => '🧑‍🦰'],
-      ['name' => 'Street', 'emoji' => '🚶‍♂️'],
+      ['name' => 'Portrait', 'emoji' => '🧑🏻'],
+      ['name' => 'Street', 'emoji' => '🚶🏻‍♀️'],
       ['name' => 'Landscape', 'emoji' => '🌄'],
       ['name' => 'Product', 'emoji' => '📦'],
       ['name' => 'Nature', 'emoji' => '🌿'],
@@ -119,11 +119,11 @@ class DatabaseSeeder extends Seeder
       ['name' => 'Documentary', 'emoji' => '🎥'],
       ['name' => 'Sport', 'emoji' => '🏅'],
       ['name' => 'Food', 'emoji' => '🍽️'],
-      ['name' => 'Night Photography', 'emoji' => '🌌'],
+      ['name' => 'Night', 'emoji' => '🌌'],
       ['name' => 'Low Light', 'emoji' => '🔦'],
       ['name' => 'Macro', 'emoji' => '🔍'],
       ['name' => 'Abstract', 'emoji' => '🎨'],
-      ['name' => 'Minimalism', 'emoji' => '⚪'],
+      ['name' => 'Minimalism', 'emoji' => '🔲'],
       ['name' => 'Underwater', 'emoji' => '🌊'],
       ['name' => 'Wedding', 'emoji' => '💍'],
       ['name' => 'Fashion', 'emoji' => '👗'],
@@ -132,7 +132,7 @@ class DatabaseSeeder extends Seeder
       ['name' => 'Black & White', 'emoji' => '⚫⚪'],
       ['name' => 'Aerial', 'emoji' => '🚁'],
       ['name' => 'Commercial', 'emoji' => '💼'],
-      ['name' => 'Self-Portrait', 'emoji' => '🤳'],
+      ['name' => 'Self-Portrait', 'emoji' => '🤳🏻'],
       ['name' => 'Conceptual', 'emoji' => '💡'],
       ['name' => 'Expired', 'emoji' => '⏳'],
       ['name' => 'Moody', 'emoji' => '🌫️'],
