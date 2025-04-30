@@ -14,7 +14,7 @@ class CommentsController {
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
-    // filter by id
+    // filter by frame
     $frameId = $request->input('frame_id');
     if ($frameId) $query->where('frame_id', $frameId);
 

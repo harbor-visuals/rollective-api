@@ -38,12 +38,12 @@ class User extends Model {
     return $request->validate([
         // Fields that are required
         'email' => [($post ? 'required' : 'sometimes'), 'email', 'unique:users,email'],
-        'username' => [($post ? 'required' : 'sometimes'), 'unique:users,username', 'min:6', 'max:12'],
+        'username' => [($post ? 'required' : 'sometimes'), 'unique:users,username', 'min:6', 'max:15'],
         'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
     
         // Fields that are optional
         'name' => ['sometimes', 'nullable', 'min:1', 'max:20'],
-        'picture' => ['sometimes', 'nullable', 'size:68'],
+        'picture' => ['sometimes', 'nullable', 'size:40'],
         'biography' => ['sometimes', 'nullable', 'min:1', 'max:150'],
         'location' => ['sometimes', 'nullable', 'min:1', 'max:30'],
       ]);

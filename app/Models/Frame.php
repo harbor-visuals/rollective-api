@@ -29,7 +29,7 @@ class Frame extends Model {
     return $request->validate([
       // Fields that are required
       'caption' => [($post ? 'required' : 'sometimes'),'min:1','max:300'],
-      'image' => [($post ? 'required' : 'sometimes'), 'size:68'],
+      'image' => [($post ? 'required' : 'sometimes'), 'size:40'],
 
       // Fields that are optional
       'camera' => ['sometimes', 'nullable', 'string', 'max:100'],
