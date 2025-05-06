@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
     Storage::putFileAs($destinationPath, $sourcePath, $filename);
   }
 
-    // articles
+    // frames
     for ($i = 0; $i < 20; $i++) {
       // generate a unique filename
       $filename = Str::uuid() . ".png";

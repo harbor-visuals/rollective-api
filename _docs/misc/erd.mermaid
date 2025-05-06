@@ -1,5 +1,5 @@
 ---
-title: Rollective Application MVP
+title: Rollective Application
 ---
 erDiagram
     users {
@@ -19,6 +19,10 @@ erDiagram
         string image
         string caption
         string location
+        string camera
+        string lens
+        string film
+        string lab
     }
     
     comments {
@@ -31,6 +35,7 @@ erDiagram
     rolls {
         int id
         string name
+        string emoji
     }
     
     frame_roll {
