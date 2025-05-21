@@ -74,10 +74,18 @@ class DatabaseSeeder extends Seeder
       // generate a unique filename
       $filename = Str::uuid() . ".png";
 
+      // generate a random user
+      $userId = random_int(1, 5);
+      $user = User::find($userId);
+
+      // caption
+      $caption = fake()->sentence();
+
       // creation of the frame
       $createdFrame = Frame::create([
-        'user_id' => random_int(1, 5),
-        'caption' => fake()->sentence(),
+        'user_id' => $userId,
+        'caption' => $caption,
+        'slug' => Frame::generateSlug($user->name, $caption),
         'image' => $filename,
         'camera' => fake()->word(),
         'lens' => fake()->word(),

@@ -10,6 +10,7 @@ return new class extends Migration {
       $table->id();
       $table->foreignId('user_id')->constrained()->cascadeOnDelete();
       $table->string('caption');
+      $table->string('slug');
       $table->string('image');
       $table->string('camera');
       $table->string('lens');

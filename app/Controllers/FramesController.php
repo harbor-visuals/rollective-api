@@ -18,6 +18,10 @@ class FramesController {
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
+    // filter by slug
+    $slug = $request->input('slug');
+    if ($slug) $query->where('slug', $slug);
+
     // filter by rolls
     $rollIds = $request->input('roll_ids');
     if ($rollIds) {
@@ -47,6 +51,13 @@ class FramesController {
 
   function create(Request $request) {
     $payload = Frame::validate($request);
+
+    // generate slug
+    $slug = Frame::generateSlug(Auth::user()->name, $payload['caption']);
+
+    // add slug to payload
+    $payload['slug'] = $slug;
+
     $frame = Auth::user()->frames()->create($payload);
     return $frame;
   }
@@ -55,6 +66,16 @@ class FramesController {
     $payload = Frame::validate($request);
     $id = $request->input('id');
     $frame = Auth::user()->frames()->findOrFail($id);
+
+    // regenerate slug (only if caption was changed)
+    if (isset($payload['caption'])) {
+        // generate new slug
+        $slug = Frame::generateSlug(Auth::user()->name, $payload['caption']);
+
+        // add slug to payload
+        $payload['slug'] = $slug;
+    }
+
     $frame->update($payload);
     return $frame;
   }

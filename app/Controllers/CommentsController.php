@@ -18,6 +18,12 @@ class CommentsController {
     $frameId = $request->input('frame_id');
     if ($frameId) $query->where('frame_id', $frameId);
 
+    // limit, offset
+    $limit = $request->input('limit', 1000);
+    $offset = $request->input('offset', 0);
+    $query->limit($limit);
+    $query->offset($offset);
+
     return $query->get();
   }
 
