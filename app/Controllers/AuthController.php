@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController {
-  function login(Request $request) {
-    $email = $request->input('email');
+class AuthController
+{
+  function login(Request $request)
+  {
+    $username = $request->input('username');
     $password = $request->input('password');
 
-    $user = User::where('email', $email)->first();
+    $user = User::where('username', $username)->first();
     if (!$user)
       return abort(404, 'no such user');
     if (!Hash::check($password, $user->password))
@@ -25,7 +27,8 @@ class AuthController {
     ];
   }
 
-  function logout(Request $request) {
+  function logout(Request $request)
+  {
     $user = Auth::user();
     $user->tokens()->delete();
     return $user;
