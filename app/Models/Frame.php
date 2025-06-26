@@ -12,6 +12,7 @@ class Frame extends Model
   #[Column] public int $id;
   #[Column] public int $user_id;
   #[Column] public string $caption;
+  #[Column] public string $location;
   #[Column] public string $slug;
   #[Column] public string $image;
   #[Column] public string $camera;
@@ -34,6 +35,7 @@ class Frame extends Model
     return $request->validate([
       // Fields that are required
       'caption' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:300'],
+      'location' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:20'],
       'image' => [($post ? 'required' : 'sometimes'), 'size:40'],
 
       // Fields that are optional

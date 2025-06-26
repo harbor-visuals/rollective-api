@@ -5,20 +5,20 @@ meta {
 }
 
 get {
-  url: http://localhost:8000/frames?slug=2025-05-21-adipisci-schon-isch-es-hie-a-de-aare
+  url: http://localhost:8000/frames?limit=20&page=1
   body: none
   auth: none
 }
 
 params:query {
-  slug: 2025-05-21-adipisci-schon-isch-es-hie-a-de-aare
+  limit: 20
+  page: 1
+  ~slug: 2025-05-21-adipisci-schon-isch-es-hie-a-de-aare
   ~user_id: 1
   ~order_dir: desc
   ~order_by: created_at
   ~id: 8
   ~roll_ids: 1,2,3
-  ~limit: 2
-  ~offset: 2
 }
 
 headers {

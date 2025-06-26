@@ -23,51 +23,51 @@ class DatabaseSeeder extends Seeder
 
     $users = [
       [
-          "email" => "alpha@gmail.com",
-          "username" => "alpha",
+        "email" => "alpha@gmail.com",
+        "username" => "alpha",
       ],
       [
-          "email" => "bravo@gmail.com",
-          "username" => "bravo",
+        "email" => "bravo@gmail.com",
+        "username" => "bravo",
       ],
       [
-          "email" => "charlie@gmail.com",
-          "username" => "charlie",
+        "email" => "charlie@gmail.com",
+        "username" => "charlie",
       ],
       [
-          "email" => "delta@gmail.com",
-          "username" => "delta",
+        "email" => "delta@gmail.com",
+        "username" => "delta",
       ],
       [
-          "email" => "echo@gmail.com",
-          "username" => "echo",
+        "email" => "echo@gmail.com",
+        "username" => "echo",
       ],
-  ];
+    ];
 
-  foreach($users as $user){
-    // generate a unique filename
-    $filename = Str::uuid() . ".png";
+    foreach ($users as $user) {
+      // generate a unique filename
+      $filename = Str::uuid() . ".png";
 
-    // creation of the user
-    $createUser = User::create([
-      'email' => $user['email'],
-      'username' => $user['username'],
-      'password' => 'password',
-      'name' => fake()->word(),
-      'picture' => $filename,
-      'biography' => fake()->sentence(),
-      'location' => fake()->word(),
-    ]);
+      // creation of the user
+      $createUser = User::create([
+        'email' => $user['email'],
+        'username' => $user['username'],
+        'password' => 'password',
+        'name' => fake()->word(),
+        'picture' => $filename,
+        'biography' => fake()->sentence(),
+        'location' => fake()->word(),
+      ]);
 
-    // path of the placeholder image
-    $sourcePath = database_path('seeders/placeholder/profilePlaceholder.png');
+      // path of the placeholder image
+      $sourcePath = database_path('seeders/placeholder/profilePlaceholder.png');
 
-    // path of where the image should be stored
-    $destinationPath = 'media/images/' . $createUser->id;
+      // path of where the image should be stored
+      $destinationPath = 'media/images/' . $createUser->id;
 
-    // save the placeholder file in the media user folder
-    Storage::putFileAs($destinationPath, $sourcePath, $filename);
-  }
+      // save the placeholder file in the media user folder
+      Storage::putFileAs($destinationPath, $sourcePath, $filename);
+    }
 
     // frames
     for ($i = 0; $i < 20; $i++) {
@@ -85,7 +85,8 @@ class DatabaseSeeder extends Seeder
       $createdFrame = Frame::create([
         'user_id' => $userId,
         'caption' => $caption,
-        'slug' => Frame::generateSlug($user->name, $caption),
+        'location' => fake()->word(),
+        'slug' => Frame::generateSlug($user->username, $caption),
         'image' => $filename,
         'camera' => fake()->word(),
         'lens' => fake()->word(),
@@ -147,7 +148,7 @@ class DatabaseSeeder extends Seeder
       ['name' => 'Automotive', 'emoji' => '🚗'],
       ['name' => 'Long Exposure', 'emoji' => '🌀'],
     ];
-    
+
     foreach ($rolls as $roll) {
       Roll::create([
         'name' => $roll['name'],

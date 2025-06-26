@@ -5,11 +5,13 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-  function up() {
+  function up()
+  {
     Schema::create('frames', function (Blueprint $table) {
       $table->id();
       $table->foreignId('user_id')->constrained()->cascadeOnDelete();
       $table->string('caption');
+      $table->string('location');
       $table->string('slug');
       $table->string('image');
       $table->string('camera');
@@ -21,7 +23,8 @@ return new class extends Migration {
     });
   }
 
-  function down() {
+  function down()
+  {
     Schema::dropIfExists('frames');
   }
 };
