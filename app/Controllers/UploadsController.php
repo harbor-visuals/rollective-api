@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 // basic media example
-class UploadsController {
-  function create(Request $request) {
+class UploadsController
+{
+  function create(Request $request)
+  {
     // NOTE: file media in php only work for POST requests!
     $user = Auth::user();
     $file = $request->file('file');
@@ -23,15 +25,21 @@ class UploadsController {
     $codedFilename = $fileCode . '.' . $extension;
 
     Storage::putFileAs(
-        'media/images/' . $user->id,
-        $file,
-        $codedFilename,
+      'media/images/' . $user->id,
+      $file,
+      $codedFilename,
     );
 
-    return response()->json(['codedFilename' => $codedFilename]);
+    $pathname = "media/images/{$user->id}/{$codedFilename}";
+
+    // Generate full HTTP URL
+    $fullUrl = url(Storage::url($pathname));
+
+    return response()->json(['codedFilename' => $codedFilename, 'url' => $fullUrl]);
   }
 
-  function destroy(Request $request) {
+  function destroy(Request $request)
+  {
     $user = Auth::user();
     $codedFilename = $request->input('codedFilename');
     $path = 'media/images/' . $user->id . '/' . $codedFilename;
