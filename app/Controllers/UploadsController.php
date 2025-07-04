@@ -44,8 +44,11 @@ class UploadsController
     $codedFilename = $request->input('codedFilename');
     $path = 'media/images/' . $user->id . '/' . $codedFilename;
     if (!Storage::exists($path))
-      return abort(404, 'file does not exist');
+      return response()->json(['success' => false, 'error' => 'File does not exist'], 404);
     Storage::delete($path);
-    return $path;
+    return response()->json([
+      'success' => true,
+      'deleted' => $path,
+    ]);
   }
 }
