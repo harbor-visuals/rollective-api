@@ -7,8 +7,10 @@ use Bootstrap\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Validation\Rule;
 
-class User extends Model {
+class User extends Model
+{
   use HasApiTokens;
 
   #[Column] public int $id;
@@ -25,31 +27,33 @@ class User extends Model {
 
   public function frames()
   {
-      return $this->hasMany(Frame::class);
+    return $this->hasMany(Frame::class);
   }
 
   public function comments()
   {
-      return $this->hasMany(Comment::class);
+    return $this->hasMany(Comment::class);
   }
 
-  static function validate(Request $request) {
+  static function validate(Request $request)
+  {
     $post = $request->method() === 'POST';
     return $request->validate([
-        // Fields that are required
-        'email' => [($post ? 'required' : 'sometimes'), 'email', 'unique:users,email'],
-        'username' => [($post ? 'required' : 'sometimes'), 'unique:users,username', 'min:6', 'max:15'],
-        'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
-    
-        // Fields that are optional
-        'name' => ['sometimes', 'nullable', 'min:1', 'max:20'],
-        'picture' => ['sometimes', 'nullable', 'size:40'],
-        'biography' => ['sometimes', 'nullable', 'min:1', 'max:150'],
-        'location' => ['sometimes', 'nullable', 'min:1', 'max:30'],
-      ]);
+      // Fields that are required
+      'email' => [($post ? 'required' : 'sometimes'), Rule::unique('users', 'email')->ignore($request->user()->id),],
+      'username' => [($post ? 'required' : 'sometimes'), Rule::unique('users', 'username')->ignore($request->user()->id), 'min:6', 'max:15'],
+      'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
+
+      // Fields that are optional
+      'name' => ['sometimes', 'nullable', 'min:1', 'max:20'],
+      'picture' => ['sometimes', 'nullable', 'size:40'],
+      'biography' => ['sometimes', 'nullable', 'min:1', 'max:150'],
+      'location' => ['sometimes', 'nullable', 'min:1', 'max:30'],
+    ]);
   }
 
-  static function booted() {
+  static function booted()
+  {
     self::saving(function (User $user) {
       if (!Hash::isHashed($user->password))
         $user->password = Hash::make($user->password);
