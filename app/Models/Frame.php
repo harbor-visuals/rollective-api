@@ -37,12 +37,10 @@ class Frame extends Model
       'caption' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:300'],
       'location' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:20'],
       'image' => [($post ? 'required' : 'sometimes'), 'size:40'],
-
-      // Fields that are optional
-      'camera' => ['sometimes', 'nullable', 'string', 'max:100'],
-      'lens' => ['sometimes', 'nullable', 'string', 'max:100'],
-      'film' => ['sometimes', 'nullable', 'string', 'max:100'],
-      'lab' => ['sometimes', 'nullable', 'string', 'max:100'],
+      'camera' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
+      'lens' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
+      'film' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
+      'lab' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
     ]);
   }
 
