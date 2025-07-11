@@ -6,20 +6,22 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class UserController {
-  function index(Request $request) {
+class UserController
+{
+  function index(Request $request)
+  {
     $query = User::query();
 
     // filter by id (hide e-mail sensitive information)
     $id = $request->input('id');
-    if($id) return $query->where('id', $id)->firstOrFail()->makeHidden('email');
+    if ($id) return $query->where('id', $id)->firstOrFail()->makeHidden('email');
 
     // filter by username
     $username = $request->input('username');
-    if($username) $query->where('username', 'like', '%' . $username . '%');
+    if ($username) $query->where('username', 'like', '%' . $username . '%');
 
     // if no filters are provided return the Authorized User
-    if(!$id && !$username){
+    if (!$id && !$username) {
       return Auth::user();
     }
 
@@ -27,20 +29,26 @@ class UserController {
     return $query->get()->makeHidden('email');
   }
 
-  function create(Request $request) {
+  function create(Request $request)
+  {
     $payload = User::validate($request);
     $user = User::create($payload);
+    if (!$user) {
+      return response()->json(['message' => 'User creation failed'], 500);
+    }
     return $user;
   }
 
-  function update(Request $request) {
+  function update(Request $request)
+  {
     $user = Auth::user();
     $payload = User::validate($request);
     $user->update($payload);
     return $user;
   }
 
-  function destroy(Request $request) {
+  function destroy(Request $request)
+  {
     $user = Auth::user();
     $user->delete();
     return $user;

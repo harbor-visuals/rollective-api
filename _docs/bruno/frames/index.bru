@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: http://localhost:8000/frames?limit=30
+  url: http://localhost:8000/frames?limit=3&page=1
   body: none
   auth: none
 }
 
 params:query {
-  limit: 30
+  limit: 3
+  page: 1
   ~slug: 2025-06-26-delta-nobis-deleniti-in-magnam-totam
-  ~page: 1
   ~user_id: 1
   ~order_dir: desc
   ~order_by: created_at

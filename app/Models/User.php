@@ -38,13 +38,30 @@ class User extends Model
   static function validate(Request $request)
   {
     $post = $request->method() === 'POST';
-    return $request->validate([
-      // Fields that are required
-      'email' => [($post ? 'required' : 'sometimes'), Rule::unique('users', 'email')->ignore($request->user()->id),],
-      'username' => [($post ? 'required' : 'sometimes'), Rule::unique('users', 'username')->ignore($request->user()->id), 'min:6', 'max:15'],
-      'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
+    $userId = $request->user()?->id;
 
-      // Fields that are optional
+    return $request->validate([
+      // Required on POST, sometimes on PATCH
+      'email' => [
+        $post ? 'required' : 'sometimes',
+        $post
+          ? Rule::unique('users', 'email')
+          : Rule::unique('users', 'email')->ignore($userId),
+      ],
+      'username' => [
+        $post ? 'required' : 'sometimes',
+        $post
+          ? Rule::unique('users', 'username')
+          : Rule::unique('users', 'username')->ignore($userId),
+        'min:6',
+        'max:15',
+      ],
+      'password' => [
+        $post ? 'required' : 'sometimes',
+        'min:8',
+      ],
+
+      // Optional fields
       'name' => ['sometimes', 'nullable', 'min:1', 'max:20'],
       'picture' => ['sometimes', 'nullable', 'size:40'],
       'biography' => ['sometimes', 'nullable', 'min:1', 'max:150'],

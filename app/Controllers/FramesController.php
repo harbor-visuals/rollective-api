@@ -55,7 +55,7 @@ class FramesController
     $payload = Frame::validate($request);
 
     // generate slug
-    $slug = Frame::generateSlug(Auth::user()->name, $payload['caption']);
+    $slug = Frame::generateSlug(Auth::user()->username, $payload['caption']);
 
     // add slug to payload
     $payload['slug'] = $slug;
@@ -73,7 +73,7 @@ class FramesController
     // regenerate slug (only if caption was changed)
     if (isset($payload['caption'])) {
       // generate new slug
-      $slug = Frame::generateSlug(Auth::user()->name, $payload['caption']);
+      $slug = Frame::generateSlug(Auth::user()->username, $payload['caption']);
 
       // add slug to payload
       $payload['slug'] = $slug;
