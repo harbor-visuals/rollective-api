@@ -173,7 +173,7 @@ class DatabaseSeeder extends Seeder
 
     $framesSeedData = [
       [
-        'file' => 'frame-1.jpg',
+        'file' => 'frame-1.webp',
         'caption' => 'Sea lions basking under the sun on a rocky coast.',
         'location' => 'La Jolla Cove',
         'camera' => 'Canon AE-1 Program',
@@ -188,7 +188,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-2.jpg',
+        'file' => 'frame-2.webp',
         'caption' => 'Golden hour reflecting off the crashing waves.',
         'location' => 'Pacific Beach',
         'camera' => 'Olympus OM-1',
@@ -202,7 +202,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-3.jpg',
+        'file' => 'frame-3.webp',
         'caption' => 'A quiet neighborhood basking in late afternoon sun.',
         'location' => 'North Park',
         'camera' => 'Pentax K1000',
@@ -216,7 +216,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-4.jpg',
+        'file' => 'frame-4.webp',
         'caption' => 'A lone palm tree reaching into the blue sky.',
         'location' => 'Mission Bay',
         'camera' => 'Minolta X-700',
@@ -230,7 +230,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-5.jpg',
+        'file' => 'frame-5.webp',
         'caption' => 'Hollywood lights glowing in the dusk.',
         'location' => 'Hollywood Blvd',
         'camera' => 'Contax G1',
@@ -244,7 +244,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-6.jpg',
+        'file' => 'frame-6.webp',
         'caption' => 'Catching a wave just before sunset.',
         'location' => 'Ocean Beach',
         'camera' => 'Nikon F100',
@@ -258,7 +258,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-7.jpg',
+        'file' => 'frame-7.webp',
         'caption' => 'Strolling the pier with ocean breeze in the air.',
         'location' => 'Crystal Pier',
         'camera' => 'Canon EOS 3',
@@ -272,7 +272,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-8.jpg',
+        'file' => 'frame-8.webp',
         'caption' => 'Preparing to paddle out—calm before the wave.',
         'location' => 'Del Mar Beach',
         'camera' => 'Nikon FM2',
@@ -285,7 +285,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-9.jpg',
+        'file' => 'frame-9.webp',
         'caption' => 'Ready for action. Lifeguards on watch.',
         'location' => 'Mission Beach',
         'camera' => 'Canon Rebel 2000',
@@ -299,7 +299,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-10.jpg',
+        'file' => 'frame-10.webp',
         'caption' => 'Coastal cliffs and rocky shoreline after the storm.',
         'location' => 'Sunset Cliffs',
         'camera' => 'Leica M6',
@@ -313,7 +313,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-11.jpg',
+        'file' => 'frame-11.webp',
         'caption' => 'Watching the sets roll in before paddling out.',
         'location' => 'San Onofre Beach',
         'camera' => 'Canon AE-1 Program',
@@ -327,7 +327,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-12.jpg',
+        'file' => 'frame-12.webp',
         'caption' => 'Big Ben towering over the Thames on a bright day.',
         'location' => 'London',
         'camera' => 'Olympus Mju-II',
@@ -341,7 +341,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-13.jpg',
+        'file' => 'frame-13.webp',
         'caption' => 'A bold red postbox tucked into a stone corner.',
         'location' => 'Edinburgh',
         'camera' => 'Nikon FM2',
@@ -355,7 +355,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-14.jpg',
+        'file' => 'frame-14.webp',
         'caption' => 'Quiet alleyway under a tiled arch in Bermondsey.',
         'location' => 'London',
         'camera' => 'Minolta X-700',
@@ -369,7 +369,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-15.jpg',
+        'file' => 'frame-15.webp',
         'caption' => 'Royal guard standing watch in full regalia.',
         'location' => 'Tower of London',
         'camera' => 'Pentax Spotmatic',
@@ -383,7 +383,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-16.jpg',
+        'file' => 'frame-16.webp',
         'caption' => 'Vintage Citroën DS parked on a cobblestone street.',
         'location' => 'Clerkenwell',
         'camera' => 'Leica M6',
@@ -397,7 +397,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-17.jpg',
+        'file' => 'frame-17.webp',
         'caption' => 'Fresh flowers in hand and sunlight on her face.',
         'location' => 'Bavarian countryside',
         'camera' => 'Canon A-1',
@@ -410,7 +410,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-18.jpg',
+        'file' => 'frame-18.webp',
         'caption' => 'Wandering a quiet forest path in early autumn.',
         'location' => 'Germany',
         'camera' => 'Yashica T4',
@@ -423,7 +423,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-19.jpg',
+        'file' => 'frame-19.webp',
         'caption' => 'California pride held high on a lakeside dock.',
         'location' => 'Staffelsee',
         'camera' => 'Contax T2',
@@ -437,7 +437,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-20.jpg',
+        'file' => 'frame-20.webp',
         'caption' => 'A mountain of gourds in every color and texture.',
         'location' => 'Bauernmarkt',
         'camera' => 'Nikon F3',
@@ -451,7 +451,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-21.jpg',
+        'file' => 'frame-21.webp',
         'caption' => 'A mint Vespa resting beside a quiet Provencal home.',
         'location' => 'Ramatuelle',
         'camera' => 'Contax T2',
@@ -465,7 +465,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-22.jpg',
+        'file' => 'frame-22.webp',
         'caption' => 'Paintbrushes waiting for their next idea.',
         'location' => 'Provence',
         'camera' => 'Canon AE-1 Program',
@@ -479,7 +479,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-23.jpg',
+        'file' => 'frame-23.webp',
         'caption' => 'Wandering pastel alleyways in the Côte d’Azur.',
         'location' => 'Bormes-les-Mimosas',
         'camera' => 'Olympus Mju-II',
@@ -492,7 +492,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-24.jpg',
+        'file' => 'frame-24.webp',
         'caption' => 'A secret courtyard tucked under Mediterranean leaves.',
         'location' => 'Gassin',
         'camera' => 'Leica M6',
@@ -505,7 +505,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-25.jpg',
+        'file' => 'frame-25.webp',
         'caption' => 'A white cat relaxing in a centuries-old fountain.',
         'location' => 'Saint-Tropez',
         'camera' => 'Minolta X-700',
@@ -519,7 +519,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-26.jpg',
+        'file' => 'frame-26.webp',
         'caption' => 'Sunlit alley cutting through pastel facades.',
         'location' => 'Collobrières',
         'camera' => 'Nikon F3',
@@ -532,7 +532,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-27.jpg',
+        'file' => 'frame-27.webp',
         'caption' => 'Ripening olives catching the Provençal sun.',
         'location' => 'La Croix-Valmer',
         'camera' => 'Canon A-1',
@@ -545,7 +545,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-28.jpg',
+        'file' => 'frame-28.webp',
         'caption' => 'Climbing stone steps under a canopy of green.',
         'location' => 'Ramatuelle',
         'camera' => 'Yashica T4',
@@ -558,7 +558,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-29.jpg',
+        'file' => 'frame-29.webp',
         'caption' => 'Potted plants and pastel homes—village life.',
         'location' => 'Gassin',
         'camera' => 'Nikon FM2',
@@ -571,7 +571,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-30.jpg',
+        'file' => 'frame-30.webp',
         'caption' => 'Afternoon stroll through the village heart.',
         'location' => 'Grimaud',
         'camera' => 'Pentax Spotmatic',
@@ -584,7 +584,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-31.jpg',
+        'file' => 'frame-31.webp',
         'caption' => 'Paddle steamer Belle Époque docked on Lake Geneva with flowers in the foreground.',
         'location' => 'Geneva',
         'camera' => 'Canon AE-1',
@@ -598,7 +598,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-32.jpg',
+        'file' => 'frame-32.webp',
         'caption' => 'A tall palm soaking up the southern French sun.',
         'location' => 'Saint-Tropez',
         'camera' => 'Yashica T4',
@@ -611,7 +611,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-33.jpg',
+        'file' => 'frame-33.webp',
         'caption' => 'A winding road through Saint-Tropez\'s calm streets and lush greenery.',
         'location' => 'Saint-Tropez',
         'camera' => 'Olympus OM-1',
@@ -625,7 +625,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-34.jpg',
+        'file' => 'frame-34.webp',
         'caption' => 'Poster from a bus stop frozen in the past.',
         'location' => 'Berlin',
         'camera' => 'Leica M6',
@@ -639,7 +639,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-35.jpg',
+        'file' => 'frame-35.webp',
         'caption' => 'A lone fir rising through the tangle of branches.',
         'location' => 'Bavaria',
         'camera' => 'Minolta SRT-101',
@@ -652,7 +652,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-36.jpg',
+        'file' => 'frame-36.webp',
         'caption' => 'A charming alleyway lined with bicycles and cozy cafes.',
         'location' => 'Munich',
         'camera' => 'Contax G2',
@@ -666,7 +666,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-37.jpg',
+        'file' => 'frame-37.webp',
         'caption' => 'Close-up of the golden clock tower glinting in the midday sun.',
         'location' => 'Munich',
         'camera' => 'Nikon F3',
@@ -679,7 +679,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-38.jpg',
+        'file' => 'frame-38.webp',
         'caption' => 'Dramatic shadows and lines on a pedestrian bridge in Munich.',
         'location' => 'Munich',
         'camera' => 'Canonet QL17 GIII',
@@ -693,7 +693,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-39.jpg',
+        'file' => 'frame-39.webp',
         'caption' => 'Ferris wheel spinning on the edge of Lake Geneva.',
         'location' => 'Geneva',
         'camera' => 'Pentax K1000',
@@ -706,7 +706,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-40.jpg',
+        'file' => 'frame-40.webp',
         'caption' => 'Clear skies and blue waters meeting in Geneva\'s lakeside calm.',
         'location' => 'Geneva',
         'camera' => 'Canon A-1',
@@ -722,7 +722,7 @@ class DatabaseSeeder extends Seeder
       [
         'caption' => 'Clouds drifting over the Geneva skyline',
         'location' => 'Geneva',
-        'file' => 'frame-41.jpg',
+        'file' => 'frame-41.webp',
         'camera' => 'Canon AE-1',
         'lens' => 'Canon FD 28mm f/2.8',
         'film' => 'Kodak Portra 400',
@@ -733,7 +733,7 @@ class DatabaseSeeder extends Seeder
       [
         'caption' => 'Ornate rooftops and classic facades',
         'location' => 'Lausanne',
-        'file' => 'frame-42.jpg',
+        'file' => 'frame-42.webp',
         'camera' => 'Nikon FM2',
         'lens' => 'Nikkor 50mm f/1.8',
         'film' => 'Fujicolor C200',
@@ -744,7 +744,7 @@ class DatabaseSeeder extends Seeder
       [
         'caption' => 'Signs of culture on a sunny walk',
         'location' => 'Geneva',
-        'file' => 'frame-43.jpg',
+        'file' => 'frame-43.webp',
         'camera' => 'Minolta X-700',
         'lens' => 'Minolta MD 45mm f/2',
         'film' => 'Kodak Ultramax 400',
@@ -755,7 +755,7 @@ class DatabaseSeeder extends Seeder
       [
         'caption' => 'Carousel and cafés by the lake',
         'location' => 'Geneva',
-        'file' => 'frame-44.jpg',
+        'file' => 'frame-44.webp',
         'camera' => 'Olympus OM-1',
         'lens' => 'Zuiko 50mm f/1.8',
         'film' => 'Kodak Gold 200',
@@ -769,7 +769,7 @@ class DatabaseSeeder extends Seeder
     foreach ($framesSeedData as $index => $frameData) {
       $userId = random_int(1, 10);
       $user = User::find($userId);
-      $filename = Str::uuid() . ".jpg";
+      $filename = Str::uuid() . ".webp";
 
       $frame = Frame::create([
         'user_id' => $userId,

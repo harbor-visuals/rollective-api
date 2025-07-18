@@ -36,7 +36,7 @@ class Frame extends Model
       // Fields that are required
       'caption' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:300'],
       'location' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:30'],
-      'image' => [($post ? 'required' : 'sometimes'), 'size:40'],
+      'image' => [($post ? 'required' : 'sometimes'), 'size:41'],
       'camera' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
       'lens' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
       'film' => [($post ? 'required' : 'sometimes'), 'min:1', 'max:100'],
