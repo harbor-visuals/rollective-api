@@ -63,7 +63,7 @@ class User extends Model
 
       // Optional fields
       'name' => ['sometimes', 'nullable', 'min:1', 'max:20'],
-      'picture' => ['sometimes', 'nullable', 'size:40'],
+      'picture' => ['sometimes', 'nullable', 'size:41'],
       'biography' => ['sometimes', 'nullable', 'min:1', 'max:150'],
       'location' => ['sometimes', 'nullable', 'min:1', 'max:30'],
     ]);
