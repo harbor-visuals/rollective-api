@@ -452,20 +452,6 @@ class DatabaseSeeder extends Seeder
       ],
       [
         'file' => 'frame-21.webp',
-        'caption' => 'A mint Vespa resting beside a quiet Provencal home.',
-        'location' => 'Ramatuelle',
-        'camera' => 'Contax T2',
-        'lens' => 'Carl Zeiss Sonnar 38mm f/2.8',
-        'film' => 'Kodak Portra 160',
-        'lab' => 'Carmencita Film Lab',
-        'roll_ids' => [3, 18, 25],
-        'comments' => [
-          'That Vespa color is so fresh!',
-          'Perfect lines and light.',
-        ],
-      ],
-      [
-        'file' => 'frame-22.webp',
         'caption' => 'Paintbrushes waiting for their next idea.',
         'location' => 'Provence',
         'camera' => 'Canon AE-1 Program',
@@ -479,7 +465,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-23.webp',
+        'file' => 'frame-22.webp',
         'caption' => 'Wandering pastel alleyways in the Côte d’Azur.',
         'location' => 'Bormes-les-Mimosas',
         'camera' => 'Olympus Mju-II',
@@ -492,7 +478,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-24.webp',
+        'file' => 'frame-23.webp',
         'caption' => 'A secret courtyard tucked under Mediterranean leaves.',
         'location' => 'Gassin',
         'camera' => 'Leica M6',
@@ -505,7 +491,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-25.webp',
+        'file' => 'frame-24.webp',
         'caption' => 'A white cat relaxing in a centuries-old fountain.',
         'location' => 'Saint-Tropez',
         'camera' => 'Minolta X-700',
@@ -519,7 +505,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-26.webp',
+        'file' => 'frame-25.webp',
         'caption' => 'Sunlit alley cutting through pastel facades.',
         'location' => 'Collobrières',
         'camera' => 'Nikon F3',
@@ -532,7 +518,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-27.webp',
+        'file' => 'frame-26.webp',
         'caption' => 'Ripening olives catching the Provençal sun.',
         'location' => 'La Croix-Valmer',
         'camera' => 'Canon A-1',
@@ -545,7 +531,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-28.webp',
+        'file' => 'frame-27.webp',
         'caption' => 'Climbing stone steps under a canopy of green.',
         'location' => 'Ramatuelle',
         'camera' => 'Yashica T4',
@@ -558,7 +544,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-29.webp',
+        'file' => 'frame-28.webp',
         'caption' => 'Potted plants and pastel homes—village life.',
         'location' => 'Gassin',
         'camera' => 'Nikon FM2',
@@ -571,7 +557,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-30.webp',
+        'file' => 'frame-29.webp',
         'caption' => 'Afternoon stroll through the village heart.',
         'location' => 'Grimaud',
         'camera' => 'Pentax Spotmatic',
@@ -584,21 +570,22 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-31.webp',
-        'caption' => 'Paddle steamer Belle Époque docked on Lake Geneva with flowers in the foreground.',
-        'location' => 'Geneva',
-        'camera' => 'Canon AE-1',
-        'lens' => 'Canon FD 50mm f/1.8',
-        'film' => 'Kodak Portra 400',
+        'file' => 'frame-30.webp',
+        'caption' => 'A mint Vespa resting beside a quiet Provencal home.',
+        'location' => 'Ramatuelle',
+        'camera' => 'Contax T2',
+        'lens' => 'Carl Zeiss Sonnar 38mm f/2.8',
+        'film' => 'Kodak Portra 160',
         'lab' => 'Carmencita Film Lab',
-        'roll_ids' => [4, 12, 18],
+        'roll_ids' => [3, 18, 25],
         'comments' => [
-          'Incredible clarity and tones!',
-          'Classic Swiss scene.',
+          'That Vespa color is so fresh!',
+          'Perfect lines and light.',
         ],
       ],
+
       [
-        'file' => 'frame-32.webp',
+        'file' => 'frame-31.webp',
         'caption' => 'A tall palm soaking up the southern French sun.',
         'location' => 'Saint-Tropez',
         'camera' => 'Yashica T4',
@@ -611,7 +598,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-33.webp',
+        'file' => 'frame-32.webp',
         'caption' => 'A winding road through Saint-Tropez\'s calm streets and lush greenery.',
         'location' => 'Saint-Tropez',
         'camera' => 'Olympus OM-1',
@@ -625,7 +612,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-34.webp',
+        'file' => 'frame-33.webp',
         'caption' => 'Poster from a bus stop frozen in the past.',
         'location' => 'Berlin',
         'camera' => 'Leica M6',
@@ -639,7 +626,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-35.webp',
+        'file' => 'frame-34.webp',
         'caption' => 'A lone fir rising through the tangle of branches.',
         'location' => 'Bavaria',
         'camera' => 'Minolta SRT-101',
@@ -652,7 +639,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-36.webp',
+        'file' => 'frame-35.webp',
         'caption' => 'A charming alleyway lined with bicycles and cozy cafes.',
         'location' => 'Munich',
         'camera' => 'Contax G2',
@@ -666,7 +653,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-37.webp',
+        'file' => 'frame-36.webp',
         'caption' => 'Close-up of the golden clock tower glinting in the midday sun.',
         'location' => 'Munich',
         'camera' => 'Nikon F3',
@@ -679,7 +666,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-38.webp',
+        'file' => 'frame-37.webp',
         'caption' => 'Dramatic shadows and lines on a pedestrian bridge in Munich.',
         'location' => 'Munich',
         'camera' => 'Canonet QL17 GIII',
@@ -693,7 +680,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-39.webp',
+        'file' => 'frame-38.webp',
         'caption' => 'Ferris wheel spinning on the edge of Lake Geneva.',
         'location' => 'Geneva',
         'camera' => 'Pentax K1000',
@@ -706,7 +693,7 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
-        'file' => 'frame-40.webp',
+        'file' => 'frame-39.webp',
         'caption' => 'Clear skies and blue waters meeting in Geneva\'s lakeside calm.',
         'location' => 'Geneva',
         'camera' => 'Canon A-1',
@@ -720,9 +707,34 @@ class DatabaseSeeder extends Seeder
         ],
       ],
       [
+        'file' => 'frame-40.webp',
+        'caption' => 'Paddle steamer Belle Époque docked on Lake Geneva with flowers in the foreground.',
+        'location' => 'Geneva',
+        'camera' => 'Canon AE-1',
+        'lens' => 'Canon FD 50mm f/1.8',
+        'film' => 'Kodak Portra 400',
+        'lab' => 'Carmencita Film Lab',
+        'roll_ids' => [4, 12, 18],
+        'comments' => [
+          'Incredible clarity and tones!',
+          'Classic Swiss scene.',
+        ],
+      ],
+      [
+        'file' => 'frame-41.webp',
+        'caption' => 'Carousel and cafés by the lake',
+        'location' => 'Geneva',
+        'camera' => 'Olympus OM-1',
+        'lens' => 'Zuiko 50mm f/1.8',
+        'film' => 'Kodak Gold 200',
+        'lab' => 'Urban Photo Lab',
+        'roll_ids' => [1, 6],
+        'comments' => ['Love the atmosphere.', 'Pure summer energy.'],
+      ],
+      [
+        'file' => 'frame-42.webp',
         'caption' => 'Clouds drifting over the Geneva skyline',
         'location' => 'Geneva',
-        'file' => 'frame-41.webp',
         'camera' => 'Canon AE-1',
         'lens' => 'Canon FD 28mm f/2.8',
         'film' => 'Kodak Portra 400',
@@ -731,9 +743,9 @@ class DatabaseSeeder extends Seeder
         'comments' => ['The ferris wheel adds charm.', 'Beautiful composition.'],
       ],
       [
+        'file' => 'frame-43.webp',
         'caption' => 'Ornate rooftops and classic facades',
         'location' => 'Lausanne',
-        'file' => 'frame-42.webp',
         'camera' => 'Nikon FM2',
         'lens' => 'Nikkor 50mm f/1.8',
         'film' => 'Fujicolor C200',
@@ -742,27 +754,16 @@ class DatabaseSeeder extends Seeder
         'comments' => ['Love the textures.', 'So much character!'],
       ],
       [
+        'file' => 'frame-44.webp',
         'caption' => 'Signs of culture on a sunny walk',
         'location' => 'Geneva',
-        'file' => 'frame-43.webp',
         'camera' => 'Minolta X-700',
         'lens' => 'Minolta MD 45mm f/2',
         'film' => 'Kodak Ultramax 400',
         'lab' => 'Nation Photo',
         'roll_ids' => [2, 5],
         'comments' => ['Great colors!', 'This feels like summer.'],
-      ],
-      [
-        'caption' => 'Carousel and cafés by the lake',
-        'location' => 'Geneva',
-        'file' => 'frame-44.webp',
-        'camera' => 'Olympus OM-1',
-        'lens' => 'Zuiko 50mm f/1.8',
-        'film' => 'Kodak Gold 200',
-        'lab' => 'Urban Photo Lab',
-        'roll_ids' => [1, 6],
-        'comments' => ['Love the atmosphere.', 'Pure summer energy.'],
-      ],
+      ]
     ];
 
 
