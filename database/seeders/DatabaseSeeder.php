@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Marcus Bennett",
         "biography" => "Always chasing light and shadow.",
         "location" => "Chicago",
-        "photo" => "user-1.png",
+        "photo" => "user-1.webp",
       ],
       [
         "email" => "liam.carter@gmail.com",
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Liam Carter",
         "biography" => "Curious about everything, especially old cameras.",
         "location" => "Portland",
-        "photo" => "user-2.png",
+        "photo" => "user-2.webp",
       ],
       [
         "email" => "noah.jensen@gmail.com",
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Noah Jensen",
         "biography" => "Nature and film—my two favorite things.",
         "location" => "Oslo",
-        "photo" => "user-3.png",
+        "photo" => "user-3.webp",
       ],
       [
         "email" => "henry.miller@gmail.com",
@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Henry Miller",
         "biography" => "Photographer, wanderer, latte addict.",
         "location" => "Berlin",
-        "photo" => "user-4.png",
+        "photo" => "user-4.webp",
       ],
       [
         "email" => "isabel.cruz@gmail.com",
@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Isabel Cruz",
         "biography" => "Capturing the in-between moments.",
         "location" => "Lisbon",
-        "photo" => "user-5.png",
+        "photo" => "user-5.webp",
       ],
       [
         "email" => "malik.washington@gmail.com",
@@ -68,7 +68,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Malik Washington",
         "biography" => "Dreamer with a lens and a purpose.",
         "location" => "Atlanta",
-        "photo" => "user-6.png",
+        "photo" => "user-6.webp",
       ],
       [
         "email" => "nina.fischer@gmail.com",
@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Nina Fischer",
         "biography" => "Forest walks and analog grain.",
         "location" => "Munich",
-        "photo" => "user-7.png",
+        "photo" => "user-7.webp",
       ],
       [
         "email" => "darnell.young@gmail.com",
@@ -84,7 +84,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Darnell Young",
         "biography" => "Documenting life, one frame at a time.",
         "location" => "Detroit",
-        "photo" => "user-8.png",
+        "photo" => "user-8.webp",
       ],
       [
         "email" => "jakob.nilsson@gmail.com",
@@ -92,7 +92,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Jakob Nilsson",
         "biography" => "Warm tones, cold climates.",
         "location" => "Stockholm",
-        "photo" => "user-9.png",
+        "photo" => "user-9.webp",
       ],
       [
         "email" => "takeshi.sato@gmail.com",
@@ -100,7 +100,7 @@ class DatabaseSeeder extends Seeder
         "name" => "Takeshi Sato",
         "biography" => "Minimal light, maximum feeling.",
         "location" => "Kyoto",
-        "photo" => "user-10.png",
+        "photo" => "user-10.webp",
       ],
     ];
 
