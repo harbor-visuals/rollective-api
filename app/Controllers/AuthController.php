@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * This file contains the AuthController, which handles user authentication through login and logout methods.
+ * The login method uses a username and password to authenticate the user and returns a bearer token.
+ */
+
 namespace App\Controllers;
 
 use App\Models\User;
@@ -9,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController
 {
+  // the login method handles the user authentication and is triggered by the "/auth/login" endpoint
   function login(Request $request)
   {
     $username = $request->input('username');
@@ -27,6 +33,7 @@ class AuthController
     ];
   }
 
+  // the logout method handles the user logout and is triggered by the "/auth/logout" endpoint
   function logout(Request $request)
   {
     $user = Auth::user();

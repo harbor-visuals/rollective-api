@@ -11,11 +11,14 @@ erDiagram
         string picture
         string biography
         string location
+        string created_at
+        string updated_at
     }
     
     frames {
         int id
         int user_id
+        string slug
         string image
         string caption
         string location
@@ -23,6 +26,8 @@ erDiagram
         string lens
         string film
         string lab
+        string created_at
+        string updated_at
     }
     
     comments {
@@ -30,12 +35,16 @@ erDiagram
         int user_id
         int frame_id
         string text
+        string created_at
+        string updated_at        
     }
     
     rolls {
         int id
         string name
         string emoji
+        string created_at
+        string updated_at
     }
     
     frame_roll {

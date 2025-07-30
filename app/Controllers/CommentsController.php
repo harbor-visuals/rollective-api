@@ -1,13 +1,21 @@
 <?php
 
+/**
+ * This file contains the CommentsController, which handles the CRUD operations for the frame comments.
+ */
+
 namespace App\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CommentsController {
-  function index(Request $request) {
+class CommentsController
+{
+
+  // the index method handles the read operation of comments and is triggered by the "/comments" endpoint via the "GET" HTTP method
+  function index(Request $request)
+  {
     $query = Comment::query();
 
     // filter by user
@@ -27,13 +35,15 @@ class CommentsController {
     return $query->get();
   }
 
-  function create(Request $request) {
+  function create(Request $request)
+  {
     $payload = Comment::validate($request);
     $comment = Auth::user()->comments()->create($payload);
     return $comment;
   }
 
-  function update(Request $request) {
+  function update(Request $request)
+  {
     $payload = Comment::validate($request);
     $id = $request->input('id');
     $comment = Auth::user()->comments()->findOrFail($id);
@@ -41,7 +51,8 @@ class CommentsController {
     return $comment;
   }
 
-  function destroy(Request $request) {
+  function destroy(Request $request)
+  {
     $id = $request->input('id');
     $comment = Auth::user()->comments()->findOrFail($id);
     $comment->delete();
