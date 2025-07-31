@@ -35,6 +35,7 @@ class CommentsController
     return $query->get();
   }
 
+  // the create method handles the create operation of comments and is triggered by the "/comments" endpoint via the "POST" HTTP method
   function create(Request $request)
   {
     $payload = Comment::validate($request);
@@ -42,6 +43,7 @@ class CommentsController
     return $comment;
   }
 
+  // the update method handles the update operation of comments and is triggered by the "/comments" endpoint via the "PATCH" HTTP method
   function update(Request $request)
   {
     $payload = Comment::validate($request);
@@ -51,6 +53,7 @@ class CommentsController
     return $comment;
   }
 
+  // the destroy method handles the delete operation of comments and is triggered by the "/comments" endpoint via the "DELETE" HTTP method
   function destroy(Request $request)
   {
     $id = $request->input('id');

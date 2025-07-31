@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file contains the FramesController, which handles the CRUD operations for the frames.
+ */
+
 namespace App\Controllers;
 
 use App\Models\Frame;
@@ -8,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class FramesController
 {
+  // the index method handles the read operation of frames and is triggered by the "/frames" endpoint via the "GET" HTTP method
   function index(Request $request)
   {
     $query = Frame::query();
@@ -50,6 +55,7 @@ class FramesController
     );
   }
 
+  // the create method handles the create operation of frames and is triggered by the "/frames" endpoint via the "POST" HTTP method
   function create(Request $request)
   {
     $payload = Frame::validate($request);
@@ -64,6 +70,7 @@ class FramesController
     return $frame;
   }
 
+  // the update method handles the update operation of comments and is triggered by the "/frames" endpoint via the "PATCH" HTTP method
   function update(Request $request)
   {
     $payload = Frame::validate($request);
@@ -83,6 +90,7 @@ class FramesController
     return $frame;
   }
 
+  // the destroy method handles the delete operation of comments and is triggered by the "/frames" endpoint via the "DELETE" HTTP method
   function destroy(Request $request)
   {
     $id = $request->input('id');
