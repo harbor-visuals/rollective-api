@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file contains the UploadsController, which handles the CRUD operations for the uploads.
+ */
+
 namespace App\Controllers;
 
 use Illuminate\Support\Str;
@@ -7,9 +11,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-// basic media example
 class UploadsController
 {
+  // the create method handles the create operation of uploads and is triggered by the "/uploads" endpoint via the "POST" HTTP method
   function create(Request $request)
   {
     // NOTE: file media in php only work for POST requests!
@@ -24,6 +28,7 @@ class UploadsController
     $extension = $file->getClientOriginalExtension();
     $codedFilename = $fileCode . '.' . $extension;
 
+    // Store the uploaded file in a user-specific folder with a custom filename (media/images/user_id/codedFilename)
     Storage::putFileAs(
       'media/images/' . $user->id,
       $file,
@@ -38,6 +43,7 @@ class UploadsController
     return response()->json(['codedFilename' => $codedFilename, 'url' => $fullUrl]);
   }
 
+  // the destroy method handles the delete operation of uploads and is triggered by the "/uploads" endpoint via the "DELETE" HTTP method
   function destroy(Request $request)
   {
     $user = Auth::user();

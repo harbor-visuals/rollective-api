@@ -1,11 +1,17 @@
 <?php
 
+/**
+ * This file contains the migration for creating the personal_access_tokens table.
+ */
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-  function up() {
+  // Run the migrations: create the personal_access_tokens table
+  function up()
+  {
     Schema::create('personal_access_tokens', function (Blueprint $table) {
       $table->id();
       $table->morphs('tokenable');
@@ -19,7 +25,9 @@ return new class extends Migration {
     });
   }
 
-  function down() {
+  // Reverse the migrations: drop the table
+  function down()
+  {
     Schema::dropIfExists('personal_access_tokens');
   }
 };

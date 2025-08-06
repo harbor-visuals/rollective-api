@@ -1,11 +1,17 @@
 <?php
 
+/**
+ * This file contains the migration for creating the users table.
+ */
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-  function up() {
+  // Run the migrations: create the users table
+  function up()
+  {
     Schema::create('users', function (Blueprint $table) {
       $table->id();
       $table->string('email');
@@ -20,7 +26,9 @@ return new class extends Migration {
     });
   }
 
-  function down() {
+  // Reverse the migrations: drop the table
+  function down()
+  {
     Schema::dropIfExists('users');
   }
 };

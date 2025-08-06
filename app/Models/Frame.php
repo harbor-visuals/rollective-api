@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file contains the Comment (Model), which represents comments on frames and handles validation logic.
+ */
+
 namespace App\Models;
 
 use Bootstrap\Model;
@@ -7,8 +11,10 @@ use Bootstrap\Column;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
+// Frame model representing a frame (post) record in the database
 class Frame extends Model
 {
+  // Frame Model Fields
   #[Column] public int $id;
   #[Column] public int $user_id;
   #[Column] public string $caption;
@@ -22,13 +28,17 @@ class Frame extends Model
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
+  // Relationship: This frame belongs to many rolls (tags)
   function rolls()
   {
     return $this->belongsToMany(Roll::class);
   }
 
+  // Eager-load 'rolls' relationship by default
+  // https://laravel.com/docs/12.x/eloquent-relationships
   protected $with = ['rolls'];
 
+  // Method validates request data (payload) for frames (create or update)
   static function validate(Request $request)
   {
     $post = $request->method() === 'POST';
@@ -44,7 +54,7 @@ class Frame extends Model
     ]);
   }
 
-  // method to generate slug
+  // Generate a unique slug for the frame based on date, username, and caption
   public static function generateSlug(string $username, string $caption): string
   {
     $date = now()->format('Y-m-d');

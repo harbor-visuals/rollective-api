@@ -1,10 +1,15 @@
 <?php
 
+/**
+ * This file contains the migration for creating the frames table.
+ */
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
+  // Run the migrations: create the frames table
   function up()
   {
     Schema::create('frames', function (Blueprint $table) {
@@ -23,6 +28,7 @@ return new class extends Migration {
     });
   }
 
+  // Reverse the migrations: drop the table
   function down()
   {
     Schema::dropIfExists('frames');
