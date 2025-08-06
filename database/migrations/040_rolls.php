@@ -1,11 +1,17 @@
 <?php
 
+/**
+ * This file contains the migration for creating the rolls table.
+ */
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-  function up() {
+  // Run the migrations: create the rolls table and the relation frame_roll relation table
+  function up()
+  {
     Schema::create('rolls', function (Blueprint $table) {
       $table->id();
       $table->string('name');
@@ -20,8 +26,10 @@ return new class extends Migration {
     });
   }
 
-  function down() {
-    Schema::dropIfExists('rolls');
+  // Reverse the migrations: drop the relation table first, then the rolls table
+  function down()
+  {
     Schema::dropIfExists('frame_roll');
+    Schema::dropIfExists('rolls');
   }
 };
