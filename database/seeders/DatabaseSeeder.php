@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file contains the seeder for the entire rollective project.
+ */
+
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
@@ -16,11 +20,13 @@ use Illuminate\Support\Facades\Log;
 
 class DatabaseSeeder extends Seeder
 {
+  // Method that runs the seeder to populate the table with initial records
   function run()
   {
     // Empty the media folder
     File::deleteDirectory(public_path('media/images'), true);
 
+    // Array with the users data that will be seeded
     $users = [
       [
         "email" => "marcus.bennett@gmail.com",
@@ -105,15 +111,16 @@ class DatabaseSeeder extends Seeder
     ];
 
 
+    // Loop through the users data
     foreach ($users as $user) {
-      // generate a unique filename
+      // generate a unique filename (before the creation to have matching filename and db entry)
       $filename = Str::uuid() . ".png";
 
       // creation of the user
       $createUser = User::create([
         'email' => $user['email'],
         'username' => $user['username'],
-        'password' => 'password', // Should be hashed in real usage
+        'password' => 'password', // Is hashed by a method in the model (booted)
         'name' => $user['name'],
         'picture' => $filename,
         'biography' => $user['biography'],
@@ -130,7 +137,7 @@ class DatabaseSeeder extends Seeder
       Storage::putFileAs($destinationPath, $sourcePath, $filename);
     }
 
-    // rolls
+    // Array with the rolls data that will be seeded
     $rolls = [
       ['name' => 'Portrait', 'emoji' => '🧑🏻'],
       ['name' => 'Street', 'emoji' => '🚶🏻‍♀️'],
@@ -164,13 +171,16 @@ class DatabaseSeeder extends Seeder
       ['name' => 'Long Exposure', 'emoji' => '🌀'],
     ];
 
+    // Loop through the rolls data
     foreach ($rolls as $roll) {
+      // creation of the roll
       Roll::create([
         'name' => $roll['name'],
         'emoji' => $roll['emoji'],
       ]);
     }
 
+    // Array with the frames data (including the comments) that will be seeded
     $framesSeedData = [
       [
         'file' => 'frame-1.webp',
@@ -767,11 +777,18 @@ class DatabaseSeeder extends Seeder
     ];
 
 
+    // Loop through the frames data
     foreach ($framesSeedData as $index => $frameData) {
+      // random user id
       $userId = random_int(1, 10);
+
+      // Retrieve the user by their ID
       $user = User::find($userId);
+
+      // generate a unique filename (before the creation to have matching filename and db entry)
       $filename = Str::uuid() . ".webp";
 
+      // creation of the user
       $frame = Frame::create([
         'user_id' => $userId,
         'caption' => $frameData['caption'],
@@ -786,16 +803,21 @@ class DatabaseSeeder extends Seeder
         'updated_at' => now()->addSeconds($index),
       ]);
 
-      // Copy image
+      // path of the placeholder image
       $sourcePath = database_path('seeders/placeholder/frame/' . $frameData['file']);
+
+      // path of where the image should be stored
       $destinationPath = 'media/images/' . $userId;
+
+      // save the placeholder file in the media user folder
       Storage::putFileAs($destinationPath, $sourcePath, $filename);
 
-      // Attach rolls
+      // Attach rolls to the frame
       $frame->rolls()->sync($frameData['roll_ids']);
 
-      // Create comments
+      // Loop through the comments data
       foreach ($frameData['comments'] as $commentText) {
+        // creation of the comment
         Comment::create([
           'text' => $commentText,
           'frame_id' => $frame->id,
