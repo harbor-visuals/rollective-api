@@ -9,6 +9,8 @@ namespace App\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class UserController
 {
@@ -54,11 +56,20 @@ class UserController
     return $user;
   }
 
-  // the destroy method handles the delete operation of users and is triggered by the "/user" endpoint via the "DELETE" HTTP method
+  // the destroy method handles the delete operation of users (deletes related frames, comments and uploads) and is triggered by the "/user" endpoint via the "DELETE" HTTP method
   function destroy(Request $request)
   {
     $user = Auth::user();
-    $user->delete();
-    return $user;
+    $deletedUser = $user->toArray();
+    $dir = public_path("media/images/{$user->id}");
+
+    DB::transaction(function () use ($user, $dir) {
+      if (File::isDirectory($dir)) {
+        File::deleteDirectory($dir);
+      }
+      $user->delete();
+    });
+
+    return $deletedUser;
   }
 }
